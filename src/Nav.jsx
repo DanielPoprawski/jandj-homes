@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export default function Nav() {
+      const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
       return (
             <nav className="bg-gray-800 shadow-lg">
                   <div className="max-w-7xl mx-auto px-4">
@@ -32,6 +36,55 @@ export default function Nav() {
                                           >
                                                 About
                                           </a>
+                                          <div className="relative">
+                                                <button
+                                                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                                                      className="border-transparent text-gray-300 hover:border-yellow-300 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                                                >
+                                                      Services
+                                                      <svg
+                                                            className="ml-2 h-4 w-4"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            viewBox="0 0 24 24"
+                                                      >
+                                                            <path
+                                                                  strokeLinecap="round"
+                                                                  strokeLinejoin="round"
+                                                                  strokeWidth="2"
+                                                                  d="M19 9l-7 7-7-7"
+                                                            />
+                                                      </svg>
+                                                </button>
+                                                {isDropdownOpen && (
+                                                      <div className="absolute z-10 w-48 py-2 mt-2 bg-white rounded-md shadow-xl">
+                                                            <a
+                                                                  href="#"
+                                                                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                                            >
+                                                                  Service 1
+                                                            </a>
+                                                            <a
+                                                                  href="#"
+                                                                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                                            >
+                                                                  Service 2
+                                                            </a>
+                                                            <a
+                                                                  href="#"
+                                                                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                                            >
+                                                                  Service 3
+                                                            </a>
+                                                            <a
+                                                                  href="#"
+                                                                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                                            >
+                                                                  Service 4
+                                                            </a>
+                                                      </div>
+                                                )}
+                                          </div>
                                           <a
                                                 href="#"
                                                 className="border-transparent text-gray-300 hover:border-yellow-300 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
