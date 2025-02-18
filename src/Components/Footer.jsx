@@ -91,14 +91,9 @@ export default function Footer() {
                                                 <span className="ml-auto">Closed</span>
                                           </div>
                                     </div>
-                              </div>
-                        </div>
-                  </div>
-
-                  <div className="bg-gray-900 py-4 px-4">
-                        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-                              <div className="mb-2 md:mb-0">
-                                    Copyright &copy; {currentYear} J&J Home Improvement. All rights reserved.
+                                    <div className="max-w-7xl pt-4 mx-auto bottom-0">
+                                          Copyright &copy; {currentYear} J&J Home Improvement. All rights reserved.
+                                    </div>
                               </div>
                         </div>
                   </div>

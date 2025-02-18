@@ -1,58 +1,97 @@
-export default function About() {
+import { MapPin, Mail, Phone } from "lucide-react";
+
+export default function Contact() {
       return (
-            <div className="min-h-screen bg-gray-900">
-                  <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                        <div className="relative bg-gray-800 rounded-lg shadow-xl">
+            <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-700 py-16">
+                  <div className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
+                        <div className="overflow-hidden rounded-xl shadow-2xl">
                               <div className="grid grid-cols-1 lg:grid-cols-3">
-                                    <div className="relative px-6 py-10 overflow-hidden bg-yellow-500 rounded-l-lg sm:px-10 xl:p-12">
-                                          <h3 className="text-xl font-bold text-gray-900">Contact information</h3>
-                                          <p className="max-w-3xl my-6 text-base text-gray-900">
-                                                Get in touch with us to discuss your dream home.
+                                    <div className="relative px-6 py-12 bg-gradient-to-br from-yellow-500 to-yellow-400 sm:px-10 xl:p-12">
+                                          <h2 className="text-3xl font-bold text-gray-900">Contact Us</h2>
+                                          <p className="max-w-3xl mt-4 mb-6 text-lg/tight  text-gray-800">
+                                                Ready to build your dream home? Our team is here to help bring your
+                                                vision to life.
                                           </p>
 
-                                          <div className="flex items-center gap-2 mb-2">
-                                                <svg
-                                                      className="flex-shrink-0 w-6 h-6"
-                                                      fill="currentColor"
-                                                      viewBox="0 0 24 24"
-                                                >
-                                                      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                                                </svg>
-                                                <span>(941) 278 - 0528</span>
+                                          <div className="space-y-3">
+                                                <div className="flex items-center">
+                                                      <div className="flex items-center justify-center w-10 h-10 bg-yellow-600 rounded-full">
+                                                            <Phone />
+                                                      </div>
+                                                      <span className="ml-3 text-lg font-semibold tracking-wide text-gray-900">
+                                                            (941) 278-0528
+                                                      </span>
+                                                </div>
+
+                                                <div className="flex items-center">
+                                                      <div className="flex items-center justify-center w-10 h-10 bg-yellow-600 rounded-full">
+                                                            <Mail />
+                                                      </div>
+                                                      <span className="ml-3 text-lg font-semibold tracking-wide text-gray-900">
+                                                            joe@jandj-homes.com
+                                                      </span>
+                                                </div>
+
+                                                <div className="flex items-center">
+                                                      <div className="flex items-center justify-center w-10 h-10 bg-yellow-600 rounded-full">
+                                                            <MapPin />
+                                                      </div>
+                                                      <span className="ml-3 text-lg font-semibold tracking-wide text-gray-900">
+                                                            Sarasota, Florida
+                                                      </span>
+                                                </div>
                                           </div>
-                                          <div className="flex items-center gap-2">
-                                                <svg
-                                                      className="flex-shrink-0 w-6 h-6"
-                                                      fill="currentColor"
-                                                      viewBox="0 0 24 24"
-                                                >
-                                                      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                                                </svg>
-                                                <span>joe@jandj-homes.com</span>
+
+                                          <div className="mt-10">
+                                                <h3 className="text-xl font-semibold text-gray-900">Business Hours</h3>
+                                                <div className="text-lg space-y-1 text-gray-800">
+                                                      <p>Monday - Friday: 9AM - 6PM</p>
+                                                      <p>Saturday: 10AM - 4PM</p>
+                                                      <p>Sunday: Closed</p>
+                                                </div>
                                           </div>
                                     </div>
-
-                                    <div className="px-6 py-10 sm:px-10 lg:col-span-2 xl:p-12">
-                                          <h3 className="text-lg font-bold text-white">Leave us a message</h3>
-                                          <form className="grid grid-cols-1 mt-6 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-                                                <div className="col-span-2">
+                                    {/* Form Panel */}
+                                    <div className="px-6 py-10 bg-gray-800 sm:px-10 lg:col-span-2 xl:p-12">
+                                          <h3 className="text-2xl font-bold text-white">Send us a message</h3>
+                                          <p className="mt-2 text-gray-400">
+                                                We'll get back to you as soon as possible
+                                          </p>
+                                          <form className="grid grid-cols-1 mt-8 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                                                <div>
                                                       <label
-                                                            htmlFor="fullName"
-                                                            className="block text-sm font-medium text-gray-300"
+                                                            htmlFor="firstName"
+                                                            className="block text-sm font-medium text-gray-100"
                                                       >
-                                                            Full Name
+                                                            First Name
                                                       </label>
                                                       <input
                                                             type="text"
-                                                            name="fullName"
-                                                            id="fullName"
-                                                            className="block w-full mt-1 text-white bg-gray-700 border-gray-600 rounded-md"
+                                                            name="firstName"
+                                                            id="firstName"
+                                                            className="block w-full px-4 py-3 mt-1 text-white placeholder-gray-500 bg-gray-700 border-0 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                                                            placeholder="John"
+                                                      />
+                                                </div>
+                                                <div>
+                                                      <label
+                                                            htmlFor="lastName"
+                                                            className="block text-sm font-medium text-gray-100"
+                                                      >
+                                                            Last Name
+                                                      </label>
+                                                      <input
+                                                            type="text"
+                                                            name="lastName"
+                                                            id="lastName"
+                                                            className="block w-full px-4 py-3 mt-1 text-white placeholder-gray-500 bg-gray-700 border-0 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                                                            placeholder="Doe"
                                                       />
                                                 </div>
                                                 <div>
                                                       <label
                                                             htmlFor="email"
-                                                            className="block text-sm font-medium text-gray-300"
+                                                            className="block text-sm font-medium text-gray-100"
                                                       >
                                                             Email
                                                       </label>
@@ -60,41 +99,59 @@ export default function About() {
                                                             type="email"
                                                             name="email"
                                                             id="email"
-                                                            className="block w-full mt-1 text-white bg-gray-700 border-gray-600 rounded-md"
+                                                            className="block w-full px-4 py-3 mt-1 text-white placeholder-gray-500 bg-gray-700 border-0 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                                                            placeholder="you@example.com"
                                                       />
                                                 </div>
                                                 <div>
                                                       <label
                                                             htmlFor="phone"
-                                                            className="block text-sm font-medium text-gray-300"
+                                                            className="block text-sm font-medium text-gray-100"
                                                       >
                                                             Phone
                                                       </label>
                                                       <input
-                                                            type="phone"
+                                                            type="tel"
                                                             name="phone"
                                                             id="phone"
-                                                            className="block w-full mt-1 text-white bg-gray-700 border-gray-600 rounded-md"
+                                                            className="block w-full px-4 py-3 mt-1 text-white placeholder-gray-500 bg-gray-700 border-0 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                                                            placeholder="(123) 456-7890"
+                                                      />
+                                                </div>
+                                                <div className="sm:col-span-2">
+                                                      <label
+                                                            htmlFor="subject"
+                                                            className="block text-sm font-medium text-gray-100"
+                                                      >
+                                                            Subject
+                                                      </label>
+                                                      <input
+                                                            type="text"
+                                                            name="subject"
+                                                            id="subject"
+                                                            className="block w-full px-4 py-3 mt-1 text-white placeholder-gray-500 bg-gray-700 border-0 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                                                            placeholder="How can we help you?"
                                                       />
                                                 </div>
                                                 <div className="sm:col-span-2">
                                                       <label
                                                             htmlFor="message"
-                                                            className="block text-sm font-medium text-gray-300"
+                                                            className="block text-sm font-medium text-gray-100"
                                                       >
                                                             Message
                                                       </label>
                                                       <textarea
                                                             name="message"
                                                             id="message"
-                                                            rows="4"
-                                                            className="block w-full mt-1 text-white bg-gray-700 border-gray-600 rounded-md"
+                                                            rows="5"
+                                                            className="block w-full px-4 py-3 mt-1 text-white placeholder-gray-500 bg-gray-700 border-0 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none resize-none"
+                                                            placeholder="Tell us about your project..."
                                                       ></textarea>
                                                 </div>
                                                 <div className="sm:col-span-2">
                                                       <button
                                                             type="submit"
-                                                            className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-gray-900 bg-yellow-500 border border-transparent rounded-md shadow-sm hover:bg-yellow-600"
+                                                            className="inline-flex items-center justify-center w-full px-6 py-4 mt-2 font-bold text-xl text-gray-900 transition duration-200 bg-yellow-500 border border-transparent rounded-md shadow-sm hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 focus:ring-offset-gray-800"
                                                       >
                                                             Send Message
                                                       </button>
